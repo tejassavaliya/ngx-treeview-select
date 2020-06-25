@@ -1,0 +1,206 @@
+.tree-dropdown {
+  position: relative;
+  display: block;
+  width: 350px;
+  margin-right: 5px;
+}
+
+.tree-dropdown-sm {
+  min-width: 280px;
+  width: 100% !important;
+}
+
+.tree-dropdown-xs {
+  width: 100% !important;
+}
+
+.tree-dropdown .select {
+  padding: 0 10px;
+  height: 32px;
+  display: block;
+  line-height: 14px;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.tree-dropdown .select[disabled] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.tree-dropdown .select::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #CDCDCD;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
+.tree-dropdown p {
+  line-height: 32px;
+  margin: 0;
+}
+
+.tree-dropdown .list {
+  box-sizing: content-box;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px 1px 1px 1px;
+  z-index: 1100;
+  overflow-x: hidden;
+  max-height: 300px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  text-align: left;
+}
+
+.tree-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tree-dropdown ul:first-child {
+  padding: 0;
+}
+
+.tree-dropdown .list p:hover {
+  background: #eee;
+}
+
+.tree-dropdown .list p.selected {
+  background: #DDDBFF;
+}
+
+.tree-dropdown .level-0 {
+  padding-left: 15px
+}
+
+.tree-dropdown .level-1 {
+  padding-left: 30px
+}
+
+.tree-dropdown .level-2 {
+  padding-left: 45px
+}
+
+.tree-dropdown .level-3 {
+  padding-left: 60px
+}
+
+.tree-dropdown .level-4 {
+  padding-left: 75px
+}
+
+.tree-dropdown .level-5 {
+  padding-left: 90px
+}
+
+.tree-dropdown .level-6 {
+  padding-left: 105px
+}
+
+.tree-dropdown .level-7 {
+  padding-left: 120px
+}
+
+.tree-dropdown .level-8 {
+  padding-left: 135px
+}
+
+.tree-dropdown .level-9 {
+  padding-left: 150px
+}
+
+.tree-dropdown .level-10 {
+  padding-left: 110px
+}
+
+/* Leveraging bootstrap's responsiveness */
+
+.tree-dropdown.form-control {
+  width: 100%;
+  padding: 0;
+}
+
+.tree-dropdown.form-control .select {
+  border: none;
+}
+
+
+
+
+
+/**
+
+ */
+
+
+:host {
+  display: block ;
+  font-size: 18px ;
+}
+.node__label {
+  color: red ;
+  cursor: pointer ;
+  text-decoration: underline ;
+}
+.node__children {
+  border-left: 3px solid #CCCCCC ;
+  margin: 5px 0 5px 30px ;
+  padding-left: 10px ;
+}
+.node--selected > .node__label {
+  background-color: red ;
+  color: white ;
+  font-weight: bold ;
+}
+/*
+.node {
+&__label {
+   color: red ;
+   cursor: pointer ;
+   text-decoration: underline ;
+ }
+
+&__children {
+   border-left: 3px solid #CCCCCC ;
+   margin: 5px 0px 5px 30px ;
+   padding-left: 10px ;
+ }
+
+&--selected {
+> .node {
+&__label {
+   background-color: red ;
+   color: white ;
+   font-weight: bold ;
+ }
+}
+}
+}
+*/
+
+
+.note {
+  color: #999999 ;
+  font-size: 15px ;
+  font-style: italic ;
+}

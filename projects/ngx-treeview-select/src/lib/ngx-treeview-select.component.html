@@ -1,0 +1,19 @@
+<div class="tree-dropdown {{selectClass}}"  #insideElement>
+  <div class='select' (click)='openTree($event)'>
+    <p class='selectedorg' *ngIf="selectedTreeNode">{{selectedTreeNode[displayKey]}}</p>
+  </div>
+  <div class='list' style='overflow:auto' *ngIf="isOpen">
+    <ul>
+      <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: list }"></ng-container>
+    </ul>
+    <ng-template #recursiveListTmpl let-list="list">
+      <li *ngFor="let item of list; let itemIndex = index;" class="node" [class.node--selected]="( item[idKey] === selectedTreeNode[idKey] )">
+        <p class="level-{{item.level}} node__label" (click)="selectNode( item )" >{{item[displayKey]}}</p>
+        <ul *ngIf="item.children && item.children.length > 0" class="node__children">
+          <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ list: item.children }">
+          </ng-container>
+        </ul>
+      </li>
+    </ng-template>
+  </div>
+</div>
